@@ -1,0 +1,128 @@
+export interface FunctionalReq {
+  id: string;
+  module: string;
+  priority: 'High' | 'Medium' | 'Low';
+  statement: string;
+}
+
+export interface NonFunctionalReq {
+  id: string;
+  category: 'Performance' | 'Security' | 'Data Integrity' | 'Privacy' | 'Backup & Recovery';
+  statement: string;
+}
+
+export const TEAM_MEMBERS = [
+  {
+    name: 'Toshnil Kirange',
+    enrollment: 'EN24CS3011085 (S2)',
+    role: 'SRS Specification & Component Architecture (Exp 2, Exp 8)',
+  },
+  {
+    name: 'Toshika Malviya',
+    enrollment: 'CS3CO40 Team',
+    role: 'Data Flow Diagrams — 0, 1 & 2 Level DFD (Exp 3)',
+  },
+  {
+    name: 'Tulaj Tripathi',
+    enrollment: 'EN24CS3011086 (5T / 5S)',
+    role: 'Use Case, Class/Object, Activity, Swimlane, State Chart & Sequence Diagrams (Exp 4–7)',
+  },
+];
+
+export const FUNCTIONAL_REQUIREMENTS: FunctionalReq[] = [
+  { id: 'REQ-001', module: 'Registration & Auth', priority: 'High', statement: 'The system shall allow users to create an account.' },
+  { id: 'REQ-002', module: 'Registration & Auth', priority: 'High', statement: 'The system shall validate required registration information.' },
+  { id: 'REQ-003', module: 'Registration & Auth', priority: 'High', statement: 'The system shall prevent registration using an already registered email address.' },
+  { id: 'REQ-004', module: 'Registration & Auth', priority: 'High', statement: 'The system shall allow registered users to log in.' },
+  { id: 'REQ-005', module: 'Registration & Auth', priority: 'High', statement: 'The system shall reject invalid login credentials.' },
+  { id: 'REQ-006', module: 'Registration & Auth', priority: 'High', statement: 'The system shall allow users to log out.' },
+  { id: 'REQ-007', module: 'Registration & Auth', priority: 'High', statement: 'The system should provide password recovery functionality.' },
+  { id: 'REQ-008', module: 'Item Reporting', priority: 'High', statement: 'The system shall allow registered users to report lost items.' },
+  { id: 'REQ-009', module: 'Item Reporting', priority: 'High', statement: 'The system shall allow registered users to report found items.' },
+  { id: 'REQ-010', module: 'Item Reporting', priority: 'High', statement: 'The system shall collect item name, category, description, date and location.' },
+  { id: 'REQ-011', module: 'Item Reporting', priority: 'High', statement: 'The system should allow users to upload an item image.' },
+  { id: 'REQ-012', module: 'Item Reporting', priority: 'High', statement: 'The system shall validate required report information.' },
+  { id: 'REQ-013', module: 'Item Reporting', priority: 'High', statement: 'The system shall assign a unique report identifier.' },
+  { id: 'REQ-014', module: 'Item Reporting', priority: 'High', statement: 'The system shall display an appropriate message when a report is submitted successfully.' },
+  { id: 'REQ-015', module: 'Search & Browse', priority: 'High', statement: 'The system shall display available lost and found reports.' },
+  { id: 'REQ-016', module: 'Search & Browse', priority: 'High', statement: 'The system shall organize reports into categories.' },
+  { id: 'REQ-017', module: 'Search & Browse', priority: 'High', statement: 'The system shall allow users to search for items.' },
+  { id: 'REQ-018', module: 'Search & Browse', priority: 'High', statement: 'The system shall allow filtering by category, location and status.' },
+  { id: 'REQ-019', module: 'Search & Browse', priority: 'High', statement: 'The system shall display item title, description, image and relevant metadata.' },
+  { id: 'REQ-020', module: 'Search & Browse', priority: 'High', statement: 'The system shall display an appropriate message when no matching item is found.' },
+  { id: 'REQ-021', module: 'Matching & Claims', priority: 'High', statement: 'The system shall allow users to submit a claim request for an eligible found item.' },
+  { id: 'REQ-022', module: 'Matching & Claims', priority: 'High', statement: 'The system shall record claim request details.' },
+  { id: 'REQ-023', module: 'Matching & Claims', priority: 'High', statement: 'The system shall prevent unauthorized users from accessing private claim information.' },
+  { id: 'REQ-024', module: 'Matching & Claims', priority: 'High', statement: 'The system shall allow administrators to review claim requests.' },
+  { id: 'REQ-025', module: 'Matching & Claims', priority: 'High', statement: 'The system shall allow administrators to approve or reject claim requests.' },
+  { id: 'REQ-026', module: 'Matching & Claims', priority: 'High', statement: 'The system shall update the item status after an approved claim.' },
+  { id: 'REQ-027', module: 'Matching & Claims', priority: 'High', statement: 'The system should notify users about claim status changes.' },
+  { id: 'REQ-028', module: 'Notifications', priority: 'Medium', statement: 'The system shall generate notifications for relevant report updates.' },
+  { id: 'REQ-029', module: 'Notifications', priority: 'Medium', statement: 'The system shall notify users about claim decisions.' },
+  { id: 'REQ-030', module: 'Notifications', priority: 'Medium', statement: 'The system should notify users about potential item matches.' },
+  { id: 'REQ-031', module: 'Notifications', priority: 'Medium', statement: 'The system shall display notification status.' },
+  { id: 'REQ-032', module: 'Notifications', priority: 'Medium', statement: 'The system shall allow users to view their notifications.' },
+  { id: 'REQ-033', module: 'Notifications', priority: 'Medium', statement: 'The system should allow users to mark notifications as read.' },
+  { id: 'REQ-034', module: 'Content Management', priority: 'High', statement: 'The system shall allow authorized administrators to view item reports.' },
+  { id: 'REQ-035', module: 'Content Management', priority: 'High', statement: 'The system shall allow administrators to update report information.' },
+  { id: 'REQ-036', module: 'Content Management', priority: 'High', statement: 'The system shall allow administrators to remove or deactivate inappropriate reports.' },
+  { id: 'REQ-037', module: 'Content Management', priority: 'High', statement: 'The system shall allow administrators to manage item categories.' },
+  { id: 'REQ-038', module: 'Content Management', priority: 'High', statement: 'The system shall allow administrators to manage campus locations.' },
+  { id: 'REQ-039', module: 'Content Management', priority: 'High', statement: 'The system shall allow administrators to update item/report status.' },
+  { id: 'REQ-040', module: 'Content Management', priority: 'High', statement: 'The system shall restrict management functions to authorized users.' },
+  { id: 'REQ-041', module: 'Administration', priority: 'High', statement: 'The system shall allow administrators to view registered users.' },
+  { id: 'REQ-042', module: 'Administration', priority: 'High', statement: 'The system shall allow administrators to manage user accounts.' },
+  { id: 'REQ-043', module: 'Administration', priority: 'High', statement: 'The system shall allow administrators to view lost/found reports.' },
+  { id: 'REQ-044', module: 'Administration', priority: 'High', statement: 'The system shall provide basic system activity reports.' },
+  { id: 'REQ-045', module: 'Administration', priority: 'High', statement: 'The system shall restrict administrative functionality using role-based access.' },
+  { id: 'REQ-046', module: 'Status Lifecycle', priority: 'High', statement: 'The system shall maintain a status for every lost and found report.' },
+  { id: 'REQ-047', module: 'Status Lifecycle', priority: 'High', statement: 'The system shall record status changes for important item activities.' },
+  { id: 'REQ-048', module: 'Status Lifecycle', priority: 'High', statement: 'The system shall prevent unauthorized users from changing report status.' },
+  { id: 'REQ-049', module: 'Item Matching', priority: 'Medium', statement: 'The system should compare relevant lost and found item information.' },
+  { id: 'REQ-050', module: 'Item Matching', priority: 'Medium', statement: 'The system should display possible matching reports to authorized users.' },
+  { id: 'REQ-051', module: 'Item Matching', priority: 'High', statement: 'The system shall not automatically mark an item as returned only because a match is detected.' },
+  { id: 'REQ-052', module: 'Verification & Handover', priority: 'High', statement: 'The system shall allow administrators to review ownership claims.' },
+  { id: 'REQ-053', module: 'Verification & Handover', priority: 'High', statement: 'The system shall allow administrators to approve or reject a claim.' },
+  { id: 'REQ-054', module: 'Verification & Handover', priority: 'High', statement: 'The system shall record the final outcome of a claim.' },
+  { id: 'REQ-055', module: 'Verification & Handover', priority: 'High', statement: 'The system shall require confirmation before marking an item as Returned.' },
+  { id: 'REQ-056', module: 'Duplicate Detection', priority: 'Medium', statement: 'The system should warn users when a similar report may already exist.' },
+  { id: 'REQ-057', module: 'Duplicate Detection', priority: 'Medium', statement: 'The system shall allow administrators to review suspected duplicate reports.' },
+  { id: 'REQ-058', module: 'Duplicate Detection', priority: 'High', statement: 'The system shall not delete a suspected duplicate automatically.' },
+  { id: 'REQ-059', module: 'Campus Taxonomy', priority: 'High', statement: 'The system shall allow administrators to add or update campus locations.' },
+  { id: 'REQ-060', module: 'Campus Taxonomy', priority: 'High', statement: 'The system shall allow administrators to manage item categories.' },
+  { id: 'REQ-061', module: 'Campus Taxonomy', priority: 'High', statement: 'Users shall select from available categories and locations when submitting a report.' },
+  { id: 'REQ-062', module: 'Privacy & Protection', priority: 'High', statement: 'The system shall restrict private user information to authorized users.' },
+  { id: 'REQ-063', module: 'Privacy & Protection', priority: 'High', statement: 'The system shall not publicly display sensitive claimant information.' },
+  { id: 'REQ-064', module: 'Privacy & Protection', priority: 'Medium', statement: 'The system should provide controlled communication or notification instead of exposing personal contact details.' },
+  { id: 'REQ-065', module: 'Audit Trail', priority: 'High', statement: 'The system shall record important administrative actions.' },
+  { id: 'REQ-066', module: 'Audit Trail', priority: 'High', statement: 'Audit records shall contain the action, time and responsible administrator account.' },
+  { id: 'REQ-067', module: 'Audit Trail', priority: 'High', statement: 'Audit records shall be accessible only to authorized administrators.' },
+  { id: 'REQ-068', module: 'Dashboard & Stats', priority: 'Medium', statement: 'The system shall display basic lost and found statistics to authorized administrators.' },
+  { id: 'REQ-069', module: 'Dashboard & Stats', priority: 'Medium', statement: 'The system should allow administrators to filter statistics by date or status.' },
+];
+
+export const NON_FUNCTIONAL_REQUIREMENTS: NonFunctionalReq[] = [
+  { id: 'REQ-NF-001', category: 'Performance', statement: 'The system should load major application pages within 3 seconds under normal network conditions.' },
+  { id: 'REQ-NF-002', category: 'Performance', statement: 'The system shall support multiple users accessing the system concurrently.' },
+  { id: 'REQ-NF-003', category: 'Performance', statement: 'Search results should be returned within 3 seconds under normal system load.' },
+  { id: 'REQ-NF-004', category: 'Performance', statement: 'Report submission should complete promptly after a valid request.' },
+  { id: 'REQ-NF-005', category: 'Performance', statement: 'The system should process notifications without unnecessary delay.' },
+  { id: 'REQ-NF-006', category: 'Security', statement: 'The system shall require authentication for registered-user functions.' },
+  { id: 'REQ-NF-007', category: 'Security', statement: 'Passwords shall be stored securely using appropriate password-hashing mechanisms.' },
+  { id: 'REQ-NF-008', category: 'Security', statement: 'The system shall use HTTPS for sensitive communications.' },
+  { id: 'REQ-NF-009', category: 'Security', statement: 'The system shall enforce role-based authorization.' },
+  { id: 'REQ-NF-010', category: 'Security', statement: 'Users shall only be able to access their own personal information and account functions.' },
+  { id: 'REQ-NF-011', category: 'Security', statement: 'Administrative functions shall only be accessible to authorized personnel.' },
+  { id: 'REQ-NF-012', category: 'Security', statement: 'Claim and report information shall be protected from unauthorized access.' },
+  { id: 'REQ-NF-013', category: 'Security', statement: 'User sessions shall be securely managed.' },
+  { id: 'REQ-NF-014', category: 'Data Integrity', statement: 'The system shall maintain consistent relationships between users, reports and claim records.' },
+  { id: 'REQ-NF-015', category: 'Data Integrity', statement: 'The system shall validate required fields before saving a report.' },
+  { id: 'REQ-NF-016', category: 'Data Integrity', statement: 'The system shall prevent accidental overwriting of important records.' },
+  { id: 'REQ-NF-017', category: 'Data Integrity', statement: 'The system should maintain backups of important application data according to the deployment policy.' },
+  { id: 'REQ-NF-018', category: 'Privacy', statement: 'Personal information shall be collected only when required for system functionality.' },
+  { id: 'REQ-NF-019', category: 'Privacy', statement: 'Access to claim and user information shall be controlled using appropriate authorization.' },
+  { id: 'REQ-NF-020', category: 'Privacy', statement: 'Publicly visible item information shall be limited to information necessary for finding the item.' },
+  { id: 'REQ-NF-021', category: 'Backup & Recovery', statement: 'Important system data should be backed up at planned intervals.' },
+  { id: 'REQ-NF-022', category: 'Backup & Recovery', statement: 'The system should provide a recovery mechanism for data loss caused by service failure.' },
+  { id: 'REQ-NF-023', category: 'Backup & Recovery', statement: 'Backup data shall be protected from unauthorized access.' },
+];

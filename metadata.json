@@ -1,0 +1,6 @@
+{
+  "name": "Campus Lost and Found System",
+  "description": "Centralized campus platform for reporting, searching, matching, claiming, and verifying lost and found belongings with integrated SRS and UML architecture documentation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
